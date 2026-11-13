@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="djaramillo6A.Views.vActualizarEliminar"
+             Title="vActualizarEliminar">
+
+    <Grid Padding="20" RowSpacing="10" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto">
+
+        <Label Text="ACTUALIZAR - ELIMINAR ESTUDIANTE"
+               FontSize="20"
+               HorizontalOptions="Center" />
+
+        <Grid Grid.Row="1" ColumnDefinitions="120,*">
+            <Label Text="CODIGO" VerticalOptions="Center" />
+            <Entry x:Name="txtCodigo" Grid.Column="1" IsEnabled="False" />
+        </Grid>
+
+        <Grid Grid.Row="2" ColumnDefinitions="120,*">
+            <Label Text="NOMBRE" VerticalOptions="Center" />
+            <Entry x:Name="txtNombre" Grid.Column="1" />
+        </Grid>
+
+        <Grid Grid.Row="3" ColumnDefinitions="120,*">
+            <Label Text="APELLIDO" VerticalOptions="Center" />
+            <Entry x:Name="txtApellido" Grid.Column="1" />
+        </Grid>
+
+        <Grid Grid.Row="4" ColumnDefinitions="120,*">
+            <Label Text="EDAD" VerticalOptions="Center" />
+            <Entry x:Name="txtEdad" Grid.Column="1" Keyboard="Numeric" />
+        </Grid>
+
+        <Grid Grid.Row="5" ColumnDefinitions="*,*" ColumnSpacing="10">
+            <Button x:Name="btnActualizar"
+                    Text="Actualizar"
+                    Clicked="btnActualizar_Clicked" />
+
+            <Button x:Name="btnEliminar"
+                    Grid.Column="1"
+                    Text="Eliminar"
+                    Clicked="btnEliminar_Clicked" />
+        </Grid>
+
+    </Grid>
+</ContentPage>

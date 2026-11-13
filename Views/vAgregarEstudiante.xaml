@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="djaramillo6A.Views.vAgregarEstudiante"
+             Title="vAgregarEstudiante">
+
+    <Grid Padding="20" RowSpacing="15" RowDefinitions="Auto,Auto,Auto,Auto,Auto">
+
+        <Label Text="SEMANA 7: AGREGAR ESTUDIANTE"
+               FontSize="20"
+               HorizontalOptions="Center" />
+
+        <Entry x:Name="txtNombre"
+               Grid.Row="1"
+               Placeholder="Ingresa el nombre" />
+
+        <Entry x:Name="txtApellido"
+               Grid.Row="2"
+               Placeholder="Ingresa el apellido" />
+
+        <Entry x:Name="txtEdad"
+               Grid.Row="3"
+               Placeholder="Ingresa la edad"
+               Keyboard="Numeric" />
+
+        <Grid Grid.Row="4" ColumnDefinitions="*,*" ColumnSpacing="10">
+            <Button x:Name="btnAgregar"
+                    Text="Agregar"
+                    Clicked="btnAgregar_Clicked" />
+
+            <Button x:Name="btnCancelar"
+                    Grid.Column="1"
+                    Text="Cancelar"
+                    Clicked="btnCancelar_Clicked" />
+        </Grid>
+
+    </Grid>
+</ContentPage>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:djaramillo6A.Models"
+             x:Class="djaramillo6A.Views.vEstudiante"
+             Title="vEstudiante">
+
+    <Grid Padding="20" RowSpacing="15" RowDefinitions="Auto,Auto,Auto,Auto,*">
+
+        <Label Text="Semana 7: Servicios web - Estudiante"
+               FontSize="22"
+               HorizontalOptions="Center" />
+
+        <Label x:Name="lblStatusMessage"
+               Grid.Row="1"
+               TextColor="IndianRed" />
+
+        <CollectionView x:Name="listaEstudiantes"
+                        Grid.Row="2"
+                        SelectionMode="Single"
+                        SelectionChanged="listaEstudiantes_SelectionChanged">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:Estudiante">
+                    <Grid Padding="5" ColumnDefinitions="60,*,*,60">
+                        <Label Text="{Binding Codigo}" />
+                        <Label Grid.Column="1" Text="{Binding Nombre}" />
+                        <Label Grid.Column="2" Text="{Binding Apellido}" />
+                        <Label Grid.Column="3" Text="{Binding Edad}" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Button x:Name="btnAgregar"
+                Grid.Row="3"
+                Text="Agregar Estudiante"
+                Clicked="btnAgregar_Clicked" />
+
+    </Grid>
+</ContentPage>
